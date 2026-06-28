@@ -51,7 +51,7 @@ body {
 
 
 .container-sm {
-  @apply max-w-5xl mx-auto px-6 md:px-10 my-6;
+  @apply w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-6;
 }
 
 /* .container {
@@ -59,11 +59,11 @@ body {
 } */
 
 .container {
-  @apply max-w-7xl mx-auto px-6 md:px-12 py-10;
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .container-lg {
-  @apply max-w-7xl mx-auto px-6 md:px-12 py-20;
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-12 md:py-20;
 }
 
 .divider {
@@ -97,9 +97,9 @@ transparent
 }
 
 .title-divider {
-  width: 120px;
+  width: clamp(70px, 15vw, 120px);
   height: 4px;
-  margin: auto;
+  margin-inline: auto;
   margin-bottom: 16px;
   border-radius: 9999px;
   background: linear-gradient(
@@ -170,8 +170,8 @@ transparent
   position: relative;
 }
 
-.section {
-  @apply py-16 md:py-24;
+.section{
+ @apply py-12 sm:py-16 lg:py-24;
 }
 
 /* Scrollbar */
@@ -207,4 +207,26 @@ border-radius:999px;
 
 .animate-float {
   animation: floatCard 4s ease-in-out infinite;
+}
+
+::-webkit-scrollbar{
+    width:5px;
+}
+
+@media (min-width:1024px){
+::-webkit-scrollbar{
+width:8px;
+}
+}
+
+@media (prefers-reduced-motion: reduce){
+
+.animate-float,
+.animate-float-tool,
+.animate-pulse-blue{
+
+animation:none;
+
+}
+
 }

@@ -82,7 +82,7 @@ export default function TestimonialsPage() {
 
       {/* TESTIMONIALS */}
 
-      <section className="container pb-28">
+      <section className="container pb-10">
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 

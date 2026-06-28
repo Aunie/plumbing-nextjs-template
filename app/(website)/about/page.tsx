@@ -31,7 +31,7 @@ export default function AboutPage() {
             Trusted Plumbing Experts
           </h1>
 
-          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9">
+          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9" style={{ marginTop: "24px" }}>
             Delivering reliable residential and commercial plumbing solutions
             with experienced technicians, fast response times and quality
             workmanship.
@@ -47,7 +47,7 @@ export default function AboutPage() {
               Our Company
             </h2>
 
-            <p className="mt-8 text-lg text-white/70 leading-relaxed">
+            <p className="mt-8 text-lg text-white/70 leading-relaxed" style={{ marginTop: "24px" }}>
               Founded with a commitment to quality workmanship, our plumbing
               company has helped hundreds of homeowners and businesses solve
               everything from emergency leaks to complete plumbing
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <h2 className="text-5xl font-bold text-[#D4AF37]">Why Choose Us</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8" style={{ marginTop: "24px" }}>
           {[
             "Licensed Plumbers",
             "24/7 Emergency Support",
@@ -98,7 +98,7 @@ export default function AboutPage() {
             <div
               key={item}
               className="
-                p-8
+              
                 rounded-3xl
                 bg-slate-900
                 border border-[#D4AF37]/20
@@ -112,7 +112,7 @@ export default function AboutPage() {
             >
               <h3 className="text-2xl font-bold text-[#D4AF37]">{item}</h3>
 
-              <p className="mt-4 text-white/60">
+              <p className=" text-white/60">
                 Premium grooming services delivered by experienced
                 professionals.
               </p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
             >
               <h3 className="text-5xl font-bold">{item.number}</h3>
 
-              <p className="mt-3 font-medium">{item.title}</p>
+              <p className="font-medium">{item.title}</p>
             </div>
           ))}
         </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-16">
+        <div className="grid md:grid-cols-3 gap-10 mt-16" style={{ marginTop: "24px" }}>
           {barbers.map((barber) => (
             <div
               key={barber.name}
@@ -217,22 +217,6 @@ export default function AboutPage() {
               certified plumbers are ready to help you anytime.
             </p>
 
-            <button
-              className="
-mt-10
-px-10
-py-4
-rounded-full
-bg-white
-text-slate-900
-font-semibold
-hover:scale-105
-transition-all
-duration-300
-"
-            >
-              Request Service
-            </button>
           </div>
         </div>
       </section>

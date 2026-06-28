@@ -65,6 +65,7 @@ export default function WhyChooseUs() {
             md:grid-cols-2
             xl:grid-cols-4
           "
+          style={{ marginTop: "24px" }}
         >
           {features.map((item, index) => {
             const Icon = item.icon;

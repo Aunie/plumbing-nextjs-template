@@ -35,7 +35,7 @@ export default function Footer() {
               Aqua<span className="text-cyan-400">Flow</span>
             </h2>
 
-            <p className="mt-6 text-slate-300 leading-8">
+            <p className="mt-6 text-slate-300 leading-8" style={{ marginTop: "16px" }}>
               Trusted plumbing professionals providing residential and
               commercial plumbing services with fast response and guaranteed
               workmanship.
@@ -51,7 +51,7 @@ export default function Footer() {
               Our Services
             </h3>
 
-            <ul className="space-y-4 text-slate-300">
+            <ul className="space-y-4 text-slate-300" style={{ marginTop: "24px" }}>
 
               <li className="flex items-center gap-3">
                 <Wrench className="w-4 h-4 text-cyan-400" />
@@ -90,7 +90,7 @@ export default function Footer() {
               Quick Links
             </h3>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4" style={{ marginTop: "24px" }}>
 
               <Link href="/" className="text-slate-300 hover:text-cyan-400 transition">
                 Home
@@ -114,7 +114,7 @@ export default function Footer() {
 
             </div>
 
-            <div className="flex gap-5 mt-8">
+            <div className="flex gap-5 mt-8" style={{ marginTop: "16px" }}>
 
               <Link
                 href="#"
@@ -142,7 +142,7 @@ export default function Footer() {
               Contact Info
             </h3>
 
-            <div className="space-y-5 text-slate-300">
+            <div className="space-y-5 text-slate-300" style={{ marginTop: "24px" }}>
 
               <div className="flex gap-3">
                 <Phone className="text-cyan-400 mt-1 w-5 h-5" />
@@ -168,7 +168,7 @@ export default function Footer() {
 
             {/* Map */}
 
-            <div className="mt-8 overflow-hidden rounded-2xl border border-cyan-500/20">
+            <div className="mt-8 overflow-hidden rounded-2xl border border-cyan-500/20" style={{ marginTop: "24px" }}>
 
               <iframe
                 title="Location"
@@ -186,11 +186,11 @@ export default function Footer() {
 
         {/* Divider */}
 
-        <div className="my-12 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+        <div className="my-12 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"  />
 
         {/* Bottom */}
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4" style={{ marginTop: "16px" }}>
 
           <p className="text-slate-400 text-sm">
             © 2026 AquaFlow Plumbing. All Rights Reserved.

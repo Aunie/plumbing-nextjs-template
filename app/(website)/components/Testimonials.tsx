@@ -59,7 +59,7 @@ export default function Testimonials() {
 
         {/* Cards */}
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4" style={{ marginTop: "24px" }}>
 
           {testimonials.map((t, i) => (
             <div

@@ -33,7 +33,6 @@ export default function BookingPage() {
 
           <p
             className="
-              mt-6
               max-w-3xl
               mx-auto
               text-lg
@@ -47,10 +46,9 @@ export default function BookingPage() {
             high-quality workmanship.
           </p>
 
-        </div>
-
-        {/* Services */}
+                {/* Services */}
         <FilteringComponent />
+        </div>
 
       </div>
 

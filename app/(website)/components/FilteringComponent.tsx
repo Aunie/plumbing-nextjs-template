@@ -64,7 +64,6 @@ export default function FilteringComponent() {
               border-cyan-500/30
               bg-slate-900
               px-7
-              py-4
               text-white
               font-medium
               shadow-lg
@@ -77,6 +76,7 @@ export default function FilteringComponent() {
               focus:ring-cyan-500/40
               hover:border-cyan-400
             "
+            style={{ marginBottom: "16px" }}
           >
             <option value="" disabled>
               Select Plumbing Service

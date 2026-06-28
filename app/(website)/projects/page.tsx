@@ -185,27 +185,11 @@ export default function ProjectsPage() {
             </h2>
 
             <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto">
-              Whether it's an emergency repair, pipe installation,
+              Whether its an emergency repair, pipe installation,
               drain cleaning or complete plumbing renovation,
-              we're ready to help.
+              we are ready to help.
             </p>
 
-            <button
-              className="
-                mt-10
-                rounded-full
-                bg-white
-                px-10
-                py-4
-                font-semibold
-                text-slate-900
-                transition-all
-                duration-300
-                hover:scale-105
-              "
-            >
-              Request A Quote
-            </button>
 
           </div>
 
