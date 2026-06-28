@@ -5,8 +5,8 @@ import toast from "react-hot-toast";
 
 
 interface booking{
-  id: Number;
-  cu
+  id: number;
+  cuustomerName: string;
 }
 const initialBookings = [
   {
