@@ -7,23 +7,47 @@ import Link from "next/link";
 export default function AdminLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   return (
-    <div className="flex min-h-screen bg-[#0B0F19] text-white"     style={{ marginTop: "10px", padding: "20px" }}>
+    <div
+      className="
+    flex
+    min-h-screen
+    bg-gradient-to-br
+    from-slate-950
+    via-blue-950
+    to-cyan-950
+    text-white
+  "
+   style={{ marginTop: "10px", padding: "20px" }}
+    >
 
       {/* SIDEBAR */}
-      <aside className="w-80 bg-[#111827] border-r border-white/10 px-6 py-10">
+      <aside
+        className="
+    w-80
+    bg-slate-900/80
+    backdrop-blur-xl
+    border-r
+    border-cyan-500/20
+    px-8
+    py-10
+    shadow-2xl
+  "
+   style={{ marginTop: "10px", padding: "20px" }}
+      >
 
         {/* BRAND */}
         <div className="mb-12">
-          <h1 className="text-3xl font-bold text-[#D4AF37] tracking-wide">
-            Royal Barber
+          <h1 className="text-3xl font-extrabold text-cyan-400">
+            Prime Plumbing
           </h1>
-          <p className="text-sm text-white/50 mt-2">
-            Admin Dashboard Panel
+
+          <p className="text-sm text-slate-400 mt-2">
+            Admin Dashboard
           </p>
         </div>
 
         {/* NAV */}
-        <nav className="flex flex-col gap-5"     style={{ marginTop: "10px", padding: "10px" }}>
+        <nav className="flex flex-col gap-4">
 
           {[
             { href: "/admin/dashboard", label: "Dashboard" },
@@ -35,19 +59,21 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               key={item.href}
               href={item.href}
               className={`
-  px-6 py-4
-  rounded-full
-  text-2xl font-semibold
-  border
-  transition-all duration-300
+flex
+items-center
+px-6
+py-4
+rounded-2xl
+font-semibold
+text-lg
+transition-all
+duration-300
+border
 
-  ${
-    pathname === item.href
-      ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-[0_10px_30px_rgba(212,175,55,0.35)]"
-      : "text-white/70 border-white/10 hover:bg-[#D4AF37]/20 hover:text-white hover:border-[#D4AF37]/40"
-  }
-
-  active:scale-[0.98]
+${pathname === item.href
+                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-cyan-400 shadow-lg shadow-cyan-500/30"
+                  : "bg-slate-900/40 border-cyan-500/10 text-slate-300 hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-white"
+                }
 `}
             >
               {item.label}
@@ -58,9 +84,16 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
       </aside>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 p-10">
-        {children}
-      </main>
+      <main
+  className="
+    flex-1
+    p-8
+    lg:p-12
+    overflow-y-auto
+  "
+>
+  {children}
+</main>
 
     </div>
   );

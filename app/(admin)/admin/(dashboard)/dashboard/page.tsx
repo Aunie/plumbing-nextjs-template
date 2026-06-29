@@ -9,6 +9,17 @@ import {
   CartesianGrid,
 } from "recharts";
 
+import {
+  DollarSign,
+  CalendarCheck,
+  Users,
+  Star,
+  Clock3,
+  Wrench,
+  Droplets,
+  TrendingUp,
+} from "lucide-react";
+
 const revenueData = [
   { month: "Jan", revenue: 3200 },
   { month: "Feb", revenue: 4100 },
@@ -18,133 +29,185 @@ const revenueData = [
   { month: "Jun", revenue: 8100 },
 ];
 
+const stats = [
+  {
+    title: "Today's Revenue",
+    value: "$1,250",
+    change: "+18%",
+    icon: DollarSign,
+    color: "from-cyan-500 to-blue-600",
+  },
+  {
+    title: "Monthly Revenue",
+    value: "$2840",
+    change: "+22%",
+    icon: TrendingUp,
+    color: "from-blue-600 to-indigo-700",
+  },
+  {
+    title: "Bookings",
+    value: "486",
+    change: "+42",
+    icon: CalendarCheck,
+    color: "from-emerald-500 to-green-700",
+  },
+  {
+    title: "Customers",
+    value: "1,284",
+    change: "+12%",
+    icon: Users,
+    color: "from-violet-500 to-purple-700",
+  },
+  {
+    title: "Emergency Calls",
+    value: "38",
+    change: "+8",
+    icon: Clock3,
+    color: "from-red-500 to-rose-700",
+  },
+  {
+    title: "Completed Jobs",
+    value: "924",
+    change: "+31",
+    icon: Wrench,
+    color: "from-orange-500 to-amber-700",
+  },
+  {
+    title: "Water Leak Repairs",
+    value: "154",
+    change: "+16",
+    icon: Droplets,
+    color: "from-sky-500 to-cyan-700",
+  },
+  {
+    title: "Customer Rating",
+    value: "4.9★",
+    change: "Excellent",
+    icon: Star,
+    color: "from-yellow-400 to-orange-500",
+  },
+];
+
 export default function Dashboard() {
   return (
-    <div className="space-y-10"     style={{ marginTop: "10px", padding: "30px" }}>
+    <div className="space-y-10" style={{ marginTop: "10px", padding: "30px" }}>
 
       {/* HEADER */}
-      <div>
-        <h1 className="text-5xl font-bold text-[#D4AF37]">
-          Dashboard
-        </h1>
+      <div
+  className="
+  rounded-3xl
+  border
+  border-cyan-500/20
+  bg-slate-900/60
+  backdrop-blur-xl
+  p-8
+"
+ style={{ marginTop: "10px", padding: "20px" }}
+>
+  <h1 className="text-5xl font-extrabold text-white">
+    Plumbing Dashboard
+  </h1>
 
-        <p className="text-white/50 mt-2 text-lg">
-          Welcome back to Royal Barber Administration
-        </p>
-      </div>
+  <p className="text-slate-400 mt-3 text-lg">
+    Welcome back! Here's today's business overview.
+  </p>
+
+  <div className="mt-6 h-1 w-40 rounded-full bg-gradient-to-r from-blue-500 via-cyan-400 to-cyan-500" />
+</div>
 
       {/* STATS */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4" >
+
+  {stats.map((item) => {
+
+    const Icon = item.icon;
+
+    return (
+
+      <div
+        key={item.title}
+        className="
+          group
+          relative
+          overflow-hidden
+          rounded-3xl
+          border
+          border-cyan-500/20
+          bg-slate-900/60
+          backdrop-blur-xl
+          p-7
+          transition-all
+          duration-500
+          hover:-translate-y-2
+          hover:scale-[1.03]
+          hover:border-cyan-400
+          hover:shadow-[0_20px_45px_rgba(6,182,212,.25)]
+        "
+         style={{ marginTop: "10px", padding: "20px" }} 
+      >
 
         <div
-          className="
-          p-6
-          rounded-3xl
-          bg-gradient-to-br
-          from-[#D4AF37]
-          to-[#B8860B]
-          text-black
-          shadow-xl
-          hover:scale-105
-          transition-all
-          duration-300
-        "
-        >
-          <p className="text-sm font-semibold uppercase text-center">
-            Todays Revenue
-          </p>
+          className={`
+            absolute
+            top-0
+            right-0
+            h-32
+            w-32
+            rounded-full
+            blur-3xl
+            opacity-20
+            bg-gradient-to-br
+            ${item.color}
+          `}
+        />
 
-          <h2 className="text-5xl font-bold mt-4 text-center">
-            $1,250
-          </h2>
+        <div className="relative z-10 flex justify-between items-start">
 
-          <p className="mt-3 text-black/70 ">
-            +18% from yesterday
-          </p>
-        </div>
+          <div>
 
-        <div
-          className="
-          p-6
-          rounded-3xl
-          bg-gradient-to-br
-          from-[#2563EB]
-          to-[#1E40AF]
-          text-white
-          shadow-xl
-          hover:scale-105
-          transition-all
-          duration-300
-        "
-        >
-          <p className="text-white/60">
-            Total Bookings
-          </p>
+            <p className="text-slate-400 text-sm">
+              {item.title}
+            </p>
 
-          <h2 className="text-5xl font-bold mt-4 text-white">
-            486
-          </h2>
+            <h2 className="mt-4 text-4xl font-extrabold text-white">
+              {item.value}
+            </h2>
 
-          <p className="text-green-400 mt-3">
-            +42 this week
-          </p>
-        </div>
+            <p className="mt-3 inline-flex rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-semibold text-emerald-400">
+              {item.change}
+            </p>
 
-        <div
-          className="
-          p-6
-          rounded-3xl
-          bg-gradient-to-br
-          from-[#7C3AED]
-          to-[#5B21B6]
-          text-white
-          shadow-xl
-          hover:scale-105
-          transition-all
-          duration-300
-        "
-        >
-          <p className="text-white/60">
-            Total Reviews
-          </p>
+          </div>
 
-          <h2 className="text-5xl font-bold mt-4 text-white">
-            328
-          </h2>
+          <div
+            className={`
+              flex
+              h-16
+              w-16
+              items-center
+              justify-center
+              rounded-2xl
+              bg-gradient-to-br
+              ${item.color}
+              shadow-xl
+              transition-transform
+              duration-500
+              group-hover:rotate-12
+              group-hover:scale-110
+            `}
+          >
+            <Icon size={30} className="text-white" />
+          </div>
 
-          <p className="text-yellow-400 mt-3">
-            4.9 ★ Rating
-          </p>
-        </div>
-
-        <div
-          className="
-          p-6
-          rounded-3xl
-          bg-gradient-to-br
-          from-[#10B981]
-          to-[#047857]
-          text-white
-          shadow-xl
-          hover:scale-105
-          transition-all
-          duration-300
-        "
-        >
-          <p className="text-white/60">
-            Monthly Revenue
-          </p>
-
-          <h2 className="text-5xl font-bold mt-4 text-white">
-            $8,100
-          </h2>
-
-          <p className="text-green-400 mt-3">
-            +22% growth
-          </p>
         </div>
 
       </div>
+
+    );
+
+  })}
+
+</div>
 
       {/* CHART + SIDE CARD */}
       <div className="grid xl:grid-cols-3 gap-6">
@@ -153,11 +216,12 @@ export default function Dashboard() {
         <div
           className="
           xl:col-span-2
-          bg-[#111827]
+          bg-blue-950
           border border-[#D4AF37]/20
           rounded-3xl
           p-6
         "
+         style={{ marginTop: "10px", padding: "20px" }}
         >
           <h2 className="text-2xl font-bold text-white mb-6">
             Revenue Trend (Last 6 Months)
@@ -176,12 +240,12 @@ export default function Dashboard() {
                   >
                     <stop
                       offset="0%"
-                      stopColor="#D4AF37"
+                      stopColor="#0e162c"
                       stopOpacity={0.8}
                     />
                     <stop
                       offset="100%"
-                      stopColor="#D4AF37"
+                      stopColor="#0e162c"
                       stopOpacity={0}
                     />
                   </linearGradient>
@@ -218,9 +282,10 @@ export default function Dashboard() {
           flex flex-col
           justify-between
         "
+         style={{ marginTop: "10px", padding: "20px" }}
         >
           <div>
-            <h3 className="text-2xl font-bold text-[#D4AF37]">
+            <h3 className="text-2xl font-bold text-white">
               Todays Summary
             </h3>
 
@@ -228,7 +293,7 @@ export default function Dashboard() {
 
               <div>
                 <p className="text-white/50">
-                  Haircuts
+                  Emergency Plumbing
                 </p>
                 <p className="text-3xl font-bold">
                   32
@@ -237,7 +302,7 @@ export default function Dashboard() {
 
               <div>
                 <p className="text-white/50">
-                  Beard Styling
+                  Drain Cleaning
                 </p>
                 <p className="text-3xl font-bold">
                   18
@@ -246,7 +311,7 @@ export default function Dashboard() {
 
               <div>
                 <p className="text-white/50">
-                  Hair Coloring
+                  Leak Detection
                 </p>
                 <p className="text-3xl font-bold">
                   9
@@ -255,7 +320,7 @@ export default function Dashboard() {
 
               <div>
                 <p className="text-white/50">
-                  New Customers
+                  Water Heater
                 </p>
                 <p className="text-3xl font-bold">
                   14
@@ -267,22 +332,38 @@ export default function Dashboard() {
 
           <div
             className="
-            mt-8
-            rounded-2xl
-            p-5
-            bg-gradient-to-r
-            from-[#D4AF37]
-            to-[#B8860B]
-            text-black
-          "
+mt-8
+rounded-2xl
+border
+border-cyan-500/30
+bg-gradient-to-r
+from-blue-700
+via-blue-600
+to-cyan-500
+text-white
+shadow-xl
+shadow-cyan-500/20
+backdrop-blur-lg
+transition-all
+duration-300
+hover:scale-[1.03]
+hover:shadow-cyan-500/40
+"
+style={{
+  padding: "20px",
+}}
           >
-            <p className="font-semibold">
-              Peak Revenue Day
-            </p>
+            <p className="font-semibold text-cyan-100">
+  Peak Revenue Day
+</p>
 
-            <h2 className="text-3xl font-bold mt-2">
-              Saturday
-            </h2>
+<h2 className="text-3xl font-bold mt-2 text-white">
+  Saturday
+</h2>
+
+<p className="mt-2 text-sm text-cyan-100">
+  Highest booking volume with 42 completed plumbing jobs.
+</p>
           </div>
         </div>
 

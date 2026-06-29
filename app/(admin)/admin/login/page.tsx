@@ -35,127 +35,126 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <section
-      className="
-      relative
-      min-h-screen
-      flex
-      items-center
-      justify-center
-      overflow-hidden
-    "
-    >
-      {/* BACKGROUND IMAGE */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+      {/* Background */}
       <div
-        className="
-        absolute inset-0
-        bg-cover bg-center
-      "
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1920&q=80')",
+            "url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=2000&q=80')",
         }}
       />
 
-      {/* DARK OVERLAY */}
-      <div
-        className="
-        absolute inset-0
-        bg-black/75
-        backdrop-blur-[2px]
-      "
-      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-cyan-950/90" />
 
-      {/* GLOW EFFECT */}
-      <div
-        className="
-       absolute
-  w-[600px]
-  h-[600px]
-  rounded-full
-  bg-[#D4AF37]/10
-  blur-[140px]
-  animate-pulse
-      "
-      />
+      {/* Glow */}
+      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-cyan-500/20 blur-[140px]" />
 
-      {/* LOGIN CARD */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[140px]" />
+
+      {/* Login Card */}
       <form
         onSubmit={handleLogin}
         className="
-          relative z-10
-          w-full max-w-md
-          p-10
-          rounded-3xl
-          border border-[#D4AF37]/20
-          bg-white/5
-          backdrop-blur-xl
-          shadow-[0_0_50px_rgba(212,175,55,0.15)]
-          animate-fadeIn
+        relative
+        z-10
+        w-full
+        max-w-lg
+        rounded-3xl
+        border
+        border-white/10
+        bg-white/10
+        backdrop-blur-2xl
+        shadow-[0_20px_80px_rgba(0,0,0,0.45)]
+        px-14
+        py-16
         "
-        style={{ marginTop: "10px", padding: "10px" }}
       >
-        {/* LOGO */}
-        <div className="text-center">
+        {/* Logo */}
+
+        <div className="flex justify-center">
           <div
             className="
-            w-20 h-20
-            mx-auto
+            w-28
+            h-28
             rounded-full
-            border-2 border-[#D4AF37]
-            flex items-center justify-center
-            text-3xl
-            mb-4
-          "
+            bg-cyan-500/10
+            border
+            border-cyan-400
+            flex
+            items-center
+            justify-center
+            text-6xl
+            shadow-[0_0_35px_rgba(34,211,238,0.3)]
+            "
           >
-            ✂️
+            🔧
           </div>
-
-          <h1
-            className="
-            text-4xl
-            font-bold
-            text-[#D4AF37]
-          "
-          >
-            Royal Barber
-          </h1>
-
-          <p className="text-white/60 mt-2">Admin Dashboard Access</p>
         </div>
 
-        {/* USERNAME */}
-        <label className="block mb-3 text-white/80 text-lg font-medium tracking-wide">
-          Username
-        </label>
+        {/* Heading */}
 
-        <input
-          className="
-    w-full
-    p-4
-    rounded-xl
-    bg-black/30
-    border border-white/10
-    text-white
-    outline-none
-    transition-all
-    duration-300
-    focus:border-[#D4AF37]
-    focus:ring-2
-    focus:ring-[#D4AF37]/30
-    pb-7
-    mb-7
-  "
-  style={{ marginTop: "10px", padding: "10px" }}
-   value={username}
-  onChange={(e) => setUsername(e.target.value)}
-  placeholder="Enter Username"
-        />
+        <div className="text-center mt-6">
+          <h1 className="text-5xl font-extrabold tracking-wide text-white">
+            Prime Plumbing
+          </h1>
 
-        {/* PASSWORD */}
-        <div className="mt-7">
-          <label className="block mb-3 text-white/80 text-lg font-medium tracking-wide">
-          Password
+          <p className="text-cyan-300 mt-3 text-base tracking-[4px] uppercase">
+            Admin Control Panel
+          </p>
+        </div>
+
+        {/* Username */}
+
+        <div className="mt-10">
+          <label className="block text-white text-lg mb-4 font-semibold" style={{
+  margin: "10px",
+}}>
+            Username
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="
+            w-full
+            max-w-[475px]
+            mx-auto
+            block
+            rounded-xl
+            border
+            border-white/10
+            bg-black/30
+            px-6
+            py-5
+            text-lg
+            text-white
+            placeholder:text-gray-400
+            outline-none
+            transition
+            duration-300
+            focus:border-cyan-400
+            focus:ring-2
+            focus:ring-cyan-500/40
+            placeholder:text-base
+            "
+                      style={{
+  padding: "10px", margin: "10px"
+}}
+          />
+        </div>
+
+        {/* Password */}
+
+        <div className="mt-10">
+          <label className="block text-white/80 mb-3 font-medium" style={{
+  margin: "10px",
+}}>
+            Password
           </label>
 
           <input
@@ -164,49 +163,63 @@ export default function AdminLoginPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="
-             w-full
-    p-4
-    rounded-xl
-    bg-black/30
-    border border-white/10
-    text-white
-    outline-none
-    transition-all
-    duration-300
-    focus:border-[#D4AF37]
-    focus:ring-2
-    focus:ring-[#D4AF37]/30
+            w-full
+            max-w-[475px]
+            mx-auto
+            block
+            rounded-xl
+            border
+            border-white/10
+            bg-black/30
+            px-5
+            py-4
+            text-white
+            placeholder:text-gray-400
+            outline-none
+            transition
+            duration-300
+            focus:border-cyan-400
+            focus:ring-2
+            focus:ring-cyan-500/40
             "
-            style={{ marginTop: "10px", padding: "10px" }}
+            style={{
+  padding: "10px", margin: "10"
+}}
           />
         </div>
 
-        {/* LOGIN BUTTON */}
-       <div className="flex justify-center mt-10">
+        {/* Button */}
+
+        <div className="flex justify-center mt-20" style={{
+  padding: "20px",
+}}>
   <button
     type="submit"
     className="
-      min-w-[180px]
-      px-8
-      py-3.5
-      rounded-xl
-      font-bold
-      text-black
-      bg-[#D4AF37]
-      hover:scale-105
-      hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]
-      transition-all
-      duration-300
+    w-20
+    py-4
+    rounded-xl
+    bg-gradient-to-r
+    from-cyan-500
+    to-blue-600
+    text-white
+    font-bold
+    text-lg
+    hover:scale-105
+    transition-all
+    duration-300
+    hover:shadow-[0_0_35px_rgba(34,211,238,0.45)]
     "
-    style={{ marginTop: "10px", padding: "10px" }}
   >
     Login
   </button>
 </div>
-        
-        <p className="text-center text-white/40 text-xs mt-10"     style={{ marginTop: "10px"}}>
-          Royal Barber Administration Portal
-        </p>
+
+        {/* Footer */}
+
+        <div className="text-center mt-10 text-white/50 text-sm">
+          © 2026 Prime Plumbing. All Rights Reserved.
+        </div>
       </form>
     </section>
   );
