@@ -61,7 +61,7 @@ export default function TestimonialsPage() {
 
         <div className="container relative z-10 text-center">
 
-          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold">
+          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold" style={{ marginTop: "24px", padding: "10px" }}>
             CLIENT TESTIMONIALS
           </span>
 
@@ -71,7 +71,7 @@ export default function TestimonialsPage() {
 
           <div className="title-divider mt-8" />
 
-          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9">
+          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9" style={{ marginBottom: "24px", padding: "20px"}}>
             Customer satisfaction is our highest priority. Here's what
             homeowners and businesses say about our plumbing services.
           </p>
@@ -84,7 +84,7 @@ export default function TestimonialsPage() {
 
       <section className="container pb-10">
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8" >
 
           {testimonials.map((item) => (
 
@@ -103,6 +103,7 @@ export default function TestimonialsPage() {
                 hover:border-cyan-400
                 hover:shadow-[0_20px_50px_rgba(6,182,212,.18)]
               "
+              style={{ marginTop: "24px", padding: "20px" }}
             >
 
               <div className="flex items-center gap-5">
@@ -152,7 +153,7 @@ export default function TestimonialsPage() {
 
       {/* CTA */}
 
-      <section className="container pb-24">
+      <section className="container pb-24" style={{ marginTop: "24px", padding: "10px" }}>
 
         <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-cyan-600 via-blue-700 to-slate-900 p-16 text-center">
 
@@ -160,11 +161,11 @@ export default function TestimonialsPage() {
 
           <div className="relative z-10">
 
-            <h2 className="text-5xl font-display font-extrabold">
+            <h2 className="text-5xl font-display font-extrabold" style={{padding: "10px" }}>
               Experience Our Professional Service
             </h2>
 
-            <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto">
+            <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto" style={{ padding: "10px", marginBottom: "10px" }}>
               Join hundreds of satisfied homeowners and businesses who
               trust us for reliable plumbing solutions.
             </p>

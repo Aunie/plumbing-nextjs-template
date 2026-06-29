@@ -20,7 +20,7 @@ const revenueData = [
 
 export default function Dashboard() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10"     style={{ marginTop: "10px", padding: "30px" }}>
 
       {/* HEADER */}
       <div>

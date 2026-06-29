@@ -49,7 +49,7 @@ export default function ProjectsPage() {
 
         <div className="container relative z-10 text-center">
 
-          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold">
+          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold" style={{ marginTop: "24px" }}>
             OUR PROJECTS
           </span>
 
@@ -57,9 +57,9 @@ export default function ProjectsPage() {
             Recent Plumbing Projects
           </h1>
 
-          <div className="title-divider mt-8" />
+          <div className="title-divider mt-8"  />
 
-          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9">
+          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9 " style={{ padding: "10px", marginBottom: "10px" }}>
             Discover some of our recently completed residential and
             commercial plumbing projects delivered with precision,
             quality workmanship and reliable service.
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
 
       <section className="container pb-28">
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8" style={{ marginTop: "24px", padding: "20px" }}>
 
           {projects.map((project) => (
 
@@ -130,7 +130,7 @@ export default function ProjectsPage() {
 
               </div>
 
-              <div className="p-8">
+              <div className="p-8" style={{ marginTop: "24px", padding: "10px" }}> 
 
                 <h3 className="text-2xl font-display font-bold text-white">
                   {project.title}
@@ -156,6 +156,7 @@ export default function ProjectsPage() {
                     hover:bg-cyan-500
                     hover:text-white
                   "
+                  style={{ marginTop: "24px", padding: "10px" }}
                 >
                   View Project
                 </button>
@@ -180,11 +181,11 @@ export default function ProjectsPage() {
 
           <div className="relative z-10">
 
-            <h2 className="text-5xl font-display font-extrabold">
+            <h2 className="text-5xl font-display font-extrabold" style={{ marginTop: "24px", padding: "10px" }}>
               Ready To Start Your Project?
             </h2>
 
-            <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto">
+            <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto" style={{padding: "10px" }}>
               Whether its an emergency repair, pipe installation,
               drain cleaning or complete plumbing renovation,
               we are ready to help.

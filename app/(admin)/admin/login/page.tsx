@@ -93,6 +93,7 @@ export default function AdminLoginPage() {
           shadow-[0_0_50px_rgba(212,175,55,0.15)]
           animate-fadeIn
         "
+        style={{ marginTop: "10px", padding: "10px" }}
       >
         {/* LOGO */}
         <div className="text-center">
@@ -124,7 +125,7 @@ export default function AdminLoginPage() {
         </div>
 
         {/* USERNAME */}
-        <label className="block mb-3 text-white/80 text-sm font-medium tracking-wide">
+        <label className="block mb-3 text-white/80 text-lg font-medium tracking-wide">
           Username
         </label>
 
@@ -145,6 +146,7 @@ export default function AdminLoginPage() {
     pb-7
     mb-7
   "
+  style={{ marginTop: "10px", padding: "10px" }}
    value={username}
   onChange={(e) => setUsername(e.target.value)}
   placeholder="Enter Username"
@@ -152,7 +154,7 @@ export default function AdminLoginPage() {
 
         {/* PASSWORD */}
         <div className="mt-7">
-          <label className="block mb-3 text-white/80 text-sm font-medium tracking-wide">
+          <label className="block mb-3 text-white/80 text-lg font-medium tracking-wide">
           Password
           </label>
 
@@ -175,6 +177,7 @@ export default function AdminLoginPage() {
     focus:ring-2
     focus:ring-[#D4AF37]/30
             "
+            style={{ marginTop: "10px", padding: "10px" }}
           />
         </div>
 
@@ -195,12 +198,13 @@ export default function AdminLoginPage() {
       transition-all
       duration-300
     "
+    style={{ marginTop: "10px", padding: "10px" }}
   >
     Login
   </button>
 </div>
-
-        <p className="text-center text-white/40 text-xs mt-6">
+        
+        <p className="text-center text-white/40 text-xs mt-10"     style={{ marginTop: "10px"}}>
           Royal Barber Administration Portal
         </p>
       </form>

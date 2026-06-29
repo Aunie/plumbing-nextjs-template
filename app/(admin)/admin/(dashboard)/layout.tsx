@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function AdminLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   return (
-    <div className="flex min-h-screen bg-[#0B0F19] text-white">
+    <div className="flex min-h-screen bg-[#0B0F19] text-white"     style={{ marginTop: "10px", padding: "20px" }}>
 
       {/* SIDEBAR */}
       <aside className="w-80 bg-[#111827] border-r border-white/10 px-6 py-10">
@@ -23,7 +23,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         </div>
 
         {/* NAV */}
-        <nav className="flex flex-col gap-5">
+        <nav className="flex flex-col gap-5"     style={{ marginTop: "10px", padding: "10px" }}>
 
           {[
             { href: "/admin/dashboard", label: "Dashboard" },

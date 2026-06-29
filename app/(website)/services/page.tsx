@@ -12,7 +12,9 @@ export default function BookingPage() {
         {/* Hero */}
         <div className="container pt-20 pb-10 text-center">
 
-          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold">
+          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold"                     style={{
+  padding: "10px", marginTop: "10px"
+}}>
             OUR SERVICES
           </span>
 
@@ -25,6 +27,7 @@ export default function BookingPage() {
               font-extrabold
               text-white
             "
+            
           >
             Professional Plumbing Services
           </h1>
@@ -39,6 +42,9 @@ export default function BookingPage() {
               text-slate-300
               leading-8
             "
+                                style={{
+  padding: "10px", marginTop: "10px"
+}}
           >
             Explore our complete range of residential and commercial
             plumbing solutions. From emergency repairs to new installations,

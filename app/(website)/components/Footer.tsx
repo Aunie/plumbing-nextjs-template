@@ -15,7 +15,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-slate-950 overflow-hidden">
+    <footer className="relative bg-slate-950 overflow-hidden mt-20" >
 
       {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(6,182,212,.08),transparent_40%)]" />
@@ -25,7 +25,7 @@ export default function Footer() {
 
       <div className="container relative z-10 py-20">
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 mt-20" style={{ padding: "4px", marginTop: "10px", }}>
 
           {/* Company */}
 
@@ -96,7 +96,7 @@ export default function Footer() {
                 Home
               </Link>
 
-              <Link href="/booking" className="text-slate-300 hover:text-cyan-400 transition">
+              <Link href="/services" className="text-slate-300 hover:text-cyan-400 transition">
                 Services
               </Link>
 

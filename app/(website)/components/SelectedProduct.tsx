@@ -30,7 +30,11 @@ export default function SelectedProduct({
         grid grid-cols-1 md:grid-cols-3
         gap-10
         container
-      ">
+      "
+                          style={{
+  padding: "30px", margin: "20px"
+}}
+      >
         {products.map((item) => (
           <ProductCard key={item.id} product={item} />
         ))}

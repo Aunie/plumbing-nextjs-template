@@ -228,7 +228,7 @@ export default function BookingsPage() {
   };
 
   return (
-    <div className="max-w-[1700px] mx-auto px-4 xl:px-8 space-y-10">
+    <div className="max-w-[1700px] mx-auto px-4 xl:px-8 space-y-10"     style={{ marginTop: "10px", padding: "20px" }}>
       <div>
         <h1 className="text-5xl font-bold text-[#D4AF37]">Manage Bookings</h1>
 
@@ -238,7 +238,7 @@ export default function BookingsPage() {
       </div>
 
       {/* SUMMARY CARDS */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6" >
         {/* TOTAL BOOKINGS */}
         <div
           className="
@@ -253,6 +253,7 @@ export default function BookingsPage() {
       transition-all
       duration-300
     "
+        style={{ marginTop: "10px", padding: "10px" }}
         >
           <p className="uppercase text-sm font-semibold">Total Bookings</p>
 
@@ -275,6 +276,7 @@ export default function BookingsPage() {
       transition-all
       duration-300
     "
+        style={{ marginTop: "10px", padding: "10px" }}
         >
           <p className="uppercase text-sm font-semibold">Pending</p>
 
@@ -297,6 +299,7 @@ export default function BookingsPage() {
       transition-all
       duration-300
     "
+        style={{ marginTop: "10px", padding: "10px" }}  
         >
           <p className="uppercase text-sm font-semibold">Completed</p>
 
@@ -317,6 +320,7 @@ export default function BookingsPage() {
     items-center
     gap-5
   "
+      style={{ marginTop: "10px", padding: "10px" }}
       >
         <input
           placeholder="Search customer..."
@@ -333,6 +337,7 @@ export default function BookingsPage() {
       focus:border-[#D4AF37]
       outline-none
     "
+        style={{ marginTop: "10px", padding: "10px" }}
         />
 
        
@@ -348,6 +353,7 @@ export default function BookingsPage() {
     shadow-[0_25px_80px_rgba(0,0,0,0.45)]
     overflow-hidden
   "
+      style={{ marginTop: "10px", padding: "10px", textAlign: "center" }}
       >
         <div
           className="
@@ -408,7 +414,7 @@ export default function BookingsPage() {
                     ${booking.revenue}
                   </td>
 
-                  <td className="p-8 py-7">
+                  <td className="p-8 py-7"     style={{ marginTop: "10px", padding: "10px" }}>
                     <span
                       className={`
                       px-4 py-2
@@ -417,6 +423,7 @@ export default function BookingsPage() {
                       text-sm
                       ${statusBadge(booking.status)}
                     `}
+                    
                     >
                       {booking.status}
                     </span>

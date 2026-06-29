@@ -143,7 +143,7 @@ ${time}`,
     <section className="min-h-screen py-24 bg-[#0B0F19] text-white">
       <div className="container pt-20 pb-10 text-center">
 
-          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold">
+          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold" style={{ marginTop: "24px", padding: "10px" }}>
             Book Service Page
           </span>
 
@@ -173,7 +173,7 @@ ${time}`,
         </div>
 
         {/* FORM */}
-        <div className="bg-slate-900 p-10 rounded-3xl border border-cyan-500/20">
+        <div className="bg-slate-900 p-10 rounded-3xl border border-cyan-500/20" style={{ padding: "20px" }}>
           <h1 className="text-4xl font-bold text-cyan-400">{product.name}</h1>
 
           <p className="text-white/60 mt-2">{product.description}</p>
@@ -183,7 +183,7 @@ ${time}`,
           {/* NAME */}
           <label className="text-lg mt-6 block">Customer Name</label>
           <input
-            className="w-full p-3 mt-2 bg-[#0B0F19] rounded-xl border border-white/10"
+            className="w-full p-3 mt-2 bg-[#0B0F19] rounded-xl border border-white/10" style={{ marginTop: "10px", padding: "10px" }}
             value={name}
             onChange={(e) => {
               const val = e.target.value;
@@ -208,7 +208,7 @@ ${time}`,
             </div>
 
             <input
-              className="w-full p-3 bg-transparent outline-none"
+              className="w-full p-3 bg-transparent outline-none" style={{ marginTop: "10px", padding: "10px" }}
               value={phone}
               onChange={(e) => {
                 const val = e.target.value.replace(/\D/g, ""); // only numbers
@@ -223,7 +223,7 @@ ${time}`,
           <label className="text-lg mt-6 block">Email Address</label>
 
           <input
-            className="w-full p-3 mt-2 bg-[#0B0F19] rounded-xl border border-white/10"
+            className="w-full p-3 mt-2 bg-[#0B0F19] rounded-xl border border-white/10" style={{ marginTop: "10px", padding: "10px" }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
@@ -235,7 +235,7 @@ City
 </label>
 
 <input
-  className="w-full p-3 mt-2 bg-slate-900 rounded-xl border border-cyan-500/20 focus:border-cyan-400 outline-none"
+  className="w-full p-3 mt-2 bg-slate-900 rounded-xl border border-cyan-500/20 focus:border-cyan-400 outline-none" style={{ marginTop: "10px", padding: "10px" }}
   value={city}
   onChange={(e) => setCity(e.target.value)}
   placeholder="New York"
@@ -248,7 +248,7 @@ Service Address
 
 <textarea
   rows={3}
-  className="w-full p-3 mt-2 bg-slate-900 rounded-xl border border-cyan-500/20 focus:border-cyan-400 outline-none resize-none"
+  className="w-full p-3 mt-2 bg-slate-900 rounded-xl border border-cyan-500/20 focus:border-cyan-400 outline-none resize-none" style={{ marginTop: "10px", padding: "10px" }}
   value={address}
   onChange={(e) => setAddress(e.target.value)}
   placeholder="Street Address"
@@ -261,7 +261,7 @@ Describe the Plumbing Issue
 
 <textarea
   rows={4}
-  className="w-full p-3 mt-2 bg-slate-900 rounded-xl border border-cyan-500/20 focus:border-cyan-400 outline-none resize-none"
+  className="w-full p-3 mt-2 bg-slate-900 rounded-xl border border-cyan-500/20 focus:border-cyan-400 outline-none resize-none" style={{ marginTop: "10px", padding: "10px" }}
   value={serviceNote}
   onChange={(e) => setServiceNote(e.target.value)}
   placeholder="Leak, clogged drain, broken pipe, water heater issue..."
@@ -280,7 +280,7 @@ Describe the Plumbing Issue
 {openCalendar && (
   <div className="mt-4 p-4 rounded-2xl bg-[#0B0F19] border border-[#D4AF37]/30 shadow-lg animate-fadeIn">
 
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-4 gap-2" style={{ marginTop: "10px", padding: "10px" }}>
       {dates.map((d, i) => {
         const isSelected = date === d.label;
 
@@ -370,6 +370,7 @@ Describe the Plumbing Issue
       shadow-lg
       shadow-cyan-500/30
     "
+    style={{ marginTop: "10px", padding: "10px" }}
   >
     Confirm Booking
   </button>

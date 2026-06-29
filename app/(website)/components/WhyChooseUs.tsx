@@ -37,9 +37,9 @@ export default function WhyChooseUs() {
     
           <div className="container relative z-10">
     
-            <div className="text-center mb-16">
+            <div className="text-center mb-16" >
     
-              <span className="inline-block px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 font-semibold text-sm tracking-wide">
+              <span className="inline-block px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 font-semibold text-sm tracking-wide" style={{ padding: "4px", marginTop: "20px", }}>
                 WHY CHOOSE US
               </span>
     
@@ -65,7 +65,9 @@ export default function WhyChooseUs() {
             md:grid-cols-2
             xl:grid-cols-4
           "
-          style={{ marginTop: "24px" }}
+            style={{
+    padding: "20px",
+  }}
         >
           {features.map((item, index) => {
             const Icon = item.icon;
@@ -90,6 +92,9 @@ export default function WhyChooseUs() {
                   hover:shadow-2xl
                   hover:shadow-cyan-500/20
                 "
+                  style={{
+    padding: "10px",
+  }}
               >
                 <div
                   className="
@@ -106,6 +111,7 @@ export default function WhyChooseUs() {
                     group-hover:scale-110
                     transition
                   "
+                  
                 >
                   <Icon
                     className="
@@ -113,6 +119,7 @@ export default function WhyChooseUs() {
                       h-8
                       text-cyan-400
                     "
+                    
                   />
                 </div>
 

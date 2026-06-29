@@ -43,6 +43,9 @@ export default function Navbar() {
         border-b border-cyan-500/20
         shadow-xl
       "
+      style={{
+  padding: "10px",
+}}
     >
       <div
         className="
@@ -149,6 +152,9 @@ export default function Navbar() {
     shadow-xl
     hover:scale-105
   "
+        style={{
+  padding: "10px",
+}}
 >
   <Phone size={18} />
   Get Free Quote

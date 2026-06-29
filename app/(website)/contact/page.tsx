@@ -9,7 +9,7 @@ export default function ContactPage() {
 
       <div className="container relative z-10 text-center">
 
-        <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold">
+        <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold" style={{ marginTop: "24px", padding: "10px" }}>
           CONTACT US
         </span>
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
 
         <div className="title-divider mt-8" />
 
-        <p className="mt-8 text-slate-300 text-xl max-w-3xl mx-auto leading-9">
+        <p className="mt-8 text-slate-300 text-xl max-w-3xl mx-auto leading-9" style={{ marginTop: "24px", padding: "20px" }}>
           Need emergency plumbing, pipe installation or leak repair?
           Our certified plumbers are available to help residential and
           commercial customers with reliable solutions.
@@ -31,12 +31,12 @@ export default function ContactPage() {
     </section>
 
     {/* CONTACT */}
-    <section className="container py-20">
+    <section className="container py-20" style={{ marginTop: "24px", padding: "20px" }}>
 
       <div className="grid lg:grid-cols-2 gap-12">
 
         {/* LEFT */}
-        <div>
+        <div style={{ marginTop: "24px", padding: "10px" }}>
 
           <h2 className="text-4xl font-display font-extrabold">
             Let's Talk
@@ -105,6 +105,7 @@ export default function ContactPage() {
             p-10
             shadow-xl
           "
+          style={{ marginTop: "24px", padding: "10px" }}
         >
 
           <h2 className="text-3xl font-display font-bold">
@@ -204,7 +205,7 @@ export default function ContactPage() {
 
     {/* LOCATION */}
 
-    <section className="container pb-24">
+    <section className="container pb-24" style={{ marginTop: "24px", padding: "30px" }}>
 
   <div className="relative overflow-hidden rounded-[40px] h-[500px] border border-cyan-500/20">
 

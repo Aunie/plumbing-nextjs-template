@@ -23,7 +23,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,.08),transparent_35%)]" />
 
         <div className="container relative z-10 text-center">
-          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold">
+          <span className="inline-block px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-semibold"                     style={{
+  padding: "10px", marginTop: "10px"
+}}>
             ABOUT US
           </span>
 
@@ -31,7 +33,7 @@ export default function AboutPage() {
             Trusted Plumbing Experts
           </h1>
 
-          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9" style={{ marginTop: "24px" }}>
+          <p className="mt-8 max-w-3xl mx-auto text-slate-300 text-xl leading-9" style={{ margin: "24px" }}>
             Delivering reliable residential and commercial plumbing solutions
             with experienced technicians, fast response times and quality
             workmanship.
@@ -83,12 +85,12 @@ export default function AboutPage() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="container py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-[#D4AF37]">Why Choose Us</h2>
+      <section className="container py-16  mt-20">
+        <div className="text-center mb-16 ">
+          <h2 className="text-5xl font-bold text-[#D4AF37]" style={{ marginTop: "20px" }} >Why Choose Us</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8" style={{ marginTop: "24px" }}>
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8" style={{ marginTop: "24px" , padding: "20px"}}>
           {[
             "Licensed Plumbers",
             "24/7 Emergency Support",
@@ -109,6 +111,7 @@ export default function AboutPage() {
                 hover:border-cyan-400
                 hover:shadow-cyan-500/20
               "
+              style={{  padding: "10px"}}
             >
               <h3 className="text-2xl font-bold text-[#D4AF37]">{item}</h3>
 
@@ -141,6 +144,7 @@ export default function AboutPage() {
                 to-[#B8860B]
                 text-black
               "
+              style={{ padding: "10px" }}
             >
               <h3 className="text-5xl font-bold">{item.number}</h3>
 
@@ -151,14 +155,14 @@ export default function AboutPage() {
       </section>
 
       {/* TEAM */}
-      <section className="container py-24">
+      <section className="container py-24" style={{ marginTop: "24px" , padding: "20px"}}>
         <div className="text-center">
           <h2 className="text-5xl font-bold text-[#D4AF37]">
             Meet Our Plumbing Experts
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-16" style={{ marginTop: "24px" }}>
+        <div className="grid md:grid-cols-3 gap-10 mt-16" style={{ marginTop: "24px", padding: "30px" }}>
           {barbers.map((barber) => (
             <div
               key={barber.name}
@@ -207,12 +211,12 @@ export default function AboutPage() {
         <div className="rounded-[40px] overflow-hidden relative bg-gradient-to-r from-cyan-600 via-blue-700 to-slate-900 p-16 text-center">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,.12),transparent_45%)]" />
 
-          <div className="relative z-10">
-            <h2 className="text-5xl font-display font-extrabold text-white">
+          <div className="relative z-10 text-center" style={{ marginTop: "24px", padding: "10px" }}>
+            <h2 className="text-5xl font-display font-extrabold text-white text-center" >
               Need Professional Plumbing Help?
             </h2>
 
-            <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto">
+            <p className="mt-6 text-slate-200 text-xl max-w-3xl mx-auto text-center">
               From emergency plumbing repairs to complete installations, our
               certified plumbers are ready to help you anytime.
             </p>

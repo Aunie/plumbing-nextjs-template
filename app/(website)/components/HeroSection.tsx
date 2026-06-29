@@ -44,7 +44,9 @@ export default function HeroSection() {
               text-cyan-300
               text-xs sm:text-xs sm:text-sm
               font-medium
+              pt-20
             "
+             style={{ padding: "4px", marginTop: "20px", }}
           >
             <ShieldCheck size={16} className="sm:w-[18px] sm:h-[18px]" />
             Trusted Plumbing Professionals
@@ -112,6 +114,9 @@ export default function HeroSection() {
           hover:scale-105
           transition
         "
+        style={{
+  padding: "4px",
+}}
       >
         Explore Services
       </button>
@@ -129,6 +134,9 @@ export default function HeroSection() {
           hover:text-slate-950
           transition
         "
+                style={{
+  padding: "4px",
+}}
       >
         Get Free Quote
       </button>

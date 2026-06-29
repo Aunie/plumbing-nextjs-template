@@ -11,6 +11,7 @@ export default function ProductCard({ product }: Props) {
       className="
         group
         overflow-hidden
+        p-2 sm:p-3
         rounded-3xl
         bg-gradient-to-br
         from-slate-900
@@ -25,6 +26,9 @@ export default function ProductCard({ product }: Props) {
         hover:border-cyan-400
         hover:shadow-cyan-500/20
       "
+       style={{
+    padding: "20px",
+  }}
     >
       {/* IMAGE */}
       <Link href={`/products/${product.id}`}>
@@ -67,7 +71,7 @@ export default function ProductCard({ product }: Props) {
 
       {/* CONTENT */}
 
-      <div className="p-7">
+      <div className="p-5 sm:p-6 md:p-7 lg:p-8 xl:p-10">
 
         <Link href={`/products/${product.id}`}>
           <h3
@@ -87,9 +91,9 @@ export default function ProductCard({ product }: Props) {
           {product.description}
         </p>
 
-        <div className="mt-8 flex justify-between items-center">
+        <div className="mt-8 flex flex-row items-center justify-between gap-4">
 
-          <div>
+          <div className="flex-1">
             <p className="text-sm text-slate-400">
               Starting From
             </p>
@@ -99,7 +103,7 @@ export default function ProductCard({ product }: Props) {
             </h4>
           </div>
 
-                  <Link href={`/products/${product.id}`}>
+            <Link href={`/products/${product.id}`} className="shrink-0">
             <button
               className="
                 px-6
@@ -116,6 +120,9 @@ export default function ProductCard({ product }: Props) {
                 shadow-lg
                 shadow-cyan-500/30
               "
+                      style={{
+  padding: "6px",
+}}
             >
               Booking
             </button>

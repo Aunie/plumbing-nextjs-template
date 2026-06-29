@@ -79,7 +79,11 @@ export default function SliderComponent() {
             tracking-[3px]
             uppercase
             mb-6
-          ">
+          "
+                              style={{
+  padding: "10px", marginTop: "10px"
+}}
+          >
             Trusted Plumbing Experts
           </span>
 
@@ -110,7 +114,7 @@ export default function SliderComponent() {
             gap-4
             justify-center
           ">
-            <Link href={`/booking`}>
+            <Link href={`/services`}>
             <button
               className="
                 px-10 py-4
@@ -121,6 +125,9 @@ export default function SliderComponent() {
                 hover:scale-105
                 transition
               "
+                    style={{
+  padding: "10px", marginTop: "10px"
+}}
             >
                Our Services
             </button>
@@ -135,6 +142,9 @@ export default function SliderComponent() {
                 hover:text-black
                 transition
               "
+                                style={{
+  padding: "10px", marginTop: "10px"
+}}
             >
               Learn More
             </button>

@@ -29,7 +29,7 @@ export default function TopFeaturedProducts() {
         "
       />
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 mt-10">
         {/* Badge */}
         <div className="flex justify-center">
           <div
@@ -43,8 +43,11 @@ export default function TopFeaturedProducts() {
               text-xs sm:text-xs sm:text-sm
               font-medium
             "
+            style={{ padding: "4px", marginTop: "10px", }}
           >
-            OUR SERVICES
+              <span className="inline-block px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 font-semibold text-sm tracking-wide mt-24" >
+                Our Featured Services
+              </span>
           </div>
         </div>
 
@@ -91,7 +94,7 @@ export default function TopFeaturedProducts() {
             Fast response, experienced technicians and affordable pricing.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" style={{ marginTop: "24px" }}>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" style={{ margin: "24px" }}>
           {products.slice(0, 6).map((item) => (
             <ProductCard
               key={item.id}
